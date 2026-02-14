@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Valentine Surprise for Zafeera 💕</title>
-    <audio id="bgMusic" autoplay loop>
-        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    <audio id="bgMusic" loop>
+    <source src="thousand-year.mp3" type="audio/mpeg">
     </audio>
     <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
     <style>
@@ -1815,6 +1815,18 @@ function correctAnswer(element, question) {
         
         // Initialize draggable photo frame
         makeDraggable();
+
+    const music = document.getElementById("bgMusic");
+
+    function playMusic() {
+        music.play();
+        document.removeEventListener("click", playMusic);
+    }
+
+    document.addEventListener("click", playMusic);
+
+
     </script>
 </body>
 </html>
+
